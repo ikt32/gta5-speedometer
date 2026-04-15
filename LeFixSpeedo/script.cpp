@@ -1142,6 +1142,8 @@ void initialize() {
 	setupTextures();
 
 	setupCompatibility();
+
+	logger.Write("initialize() Completed!");
 }
 
 void update()
@@ -1225,7 +1227,7 @@ void update()
 			draw_pla_vert();
 		}
 	}
-	
+
 }
 
 void updateMenu()

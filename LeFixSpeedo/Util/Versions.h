@@ -81,6 +81,8 @@ static std::vector<std::string> GameVersionString = {
     //"VER_1_0_1734_0_STEAM",   // XX
     //"VER_1_0_1734_0_NOSTEAM", // XX
 
+    //This value also represents the exe version 1.0.1734.0 for Steam version. 
+    //1.0.1737.0 basically works in the same way as 1.0.1734.0 but with bug fixes.
     "VER_1_0_1737_0_STEAM",     // 50
     "VER_1_0_1737_0_NOSTEAM",   // 51
 
@@ -103,6 +105,51 @@ static std::vector<std::string> GameVersionString = {
 
     "VER_1_0_2189_0_STEAM",     // 63
     "VER_1_0_2189_0_NOSTEAM",   // 64
+
+    "VER_1_0_2215_0_STEAM",     // 65
+    "VER_1_0_2215_0_NOSTEAM",   // 66
+
+    "VER_1_0_2245_0_STEAM",     // 67
+    "VER_1_0_2245_0_NOSTEAM",   // 68
+
+    "VER_1_0_2372_0_STEAM",     // 69
+    "VER_1_0_2372_0_NOSTEAM",   // 70
+
+    "VER_1_0_2545_0_STEAM",     // 71
+    "VER_1_0_2545_0_NOSTEAM",   // 72
+
+    "VER_1_0_2612_1_STEAM",     // 73
+    "VER_1_0_2612_1_NOSTEAM",   // 74
+
+    "VER_1_0_2628_2_STEAM",     // 75
+    "VER_1_0_2628_2_NOSTEAM",   // 76
+
+    "VER_1_0_2699_0_STEAM",     // 77
+    "VER_1_0_2699_0_NOSTEAM",   // 78
+
+    "VER_1_0_2699_16",          // 79
+    "VER_0_2802_0",             // 80
+    "VER_0_2824_0",             // 81
+    "VER_0_2845_0",             // 82
+    "VER_0_2944_0",             // 83
+    "VER_0_3028_0",             // 84
+    "VER_0_3095_0",             // 85
+    "VER_0_3179_0",             // 86
+    "VER_0_3258_0",             // 87
+    "VER_0_3274_0",             // 88
+    "VER_0_3323_0",             // 89
+    "VER_0_3337_0",             // 90
+    "VER_0_3351_0",             // 91
+    "VER_0_3407_0",             // 92
+    "VER_0_3411_0",             // 93
+    "VER_0_3442_0",             // 94
+    "VER_0_3504_0",             // 95
+    "VER_0_3521_0",             // 96
+    "VER_0_3570_0",             // 97
+    "VER_0_3586_0",             // 98
+    "VER_0_3717_0",             // 99
+    "VER_0_3751_0",             // 100
+    "VER_0_3788_0",             // 101
 };
 
 enum G_GameVersion : int {
@@ -206,6 +253,53 @@ enum G_GameVersion : int {
 
     G_VER_1_0_2189_0_STEAM,     // 63
     G_VER_1_0_2189_0_NOSTEAM,   // 64
+
+    G_VER_1_0_2215_0_STEAM,     // 65
+    G_VER_1_0_2215_0_NOSTEAM,   // 66
+
+    G_VER_1_0_2245_0_STEAM,     // 67
+    G_VER_1_0_2245_0_NOSTEAM,   // 68
+
+    /// This value also represents the exe version 1.0.2372.2 for Steam version. 
+    // 1.0.2372.2 basically works in the same way as 1.0.2372.0 but with bug fixes.
+    G_VER_1_0_2372_0_STEAM,     // 69
+    G_VER_1_0_2372_0_NOSTEAM,   // 70
+
+    G_VER_1_0_2545_0_STEAM,     // 71
+    G_VER_1_0_2545_0_NOSTEAM,   // 72
+
+    G_VER_1_0_2612_1_STEAM,     // 73
+    G_VER_1_0_2612_1_NOSTEAM,   // 74
+
+    G_VER_1_0_2628_2_STEAM,     // 75
+    G_VER_1_0_2628_2_NOSTEAM,   // 76
+
+    G_VER_1_0_2699_0_STEAM,     // 77
+    G_VER_1_0_2699_0_NOSTEAM,   // 78
+
+    G_VER_1_0_2699_16,          // 79
+    G_VER_0_2802_0,             // 80
+    G_VER_0_2824_0,             // 81
+    G_VER_0_2845_0,             // 82
+    G_VER_0_2944_0,             // 83
+    G_VER_0_3028_0,             // 84
+    G_VER_0_3095_0,             // 85
+    G_VER_0_3179_0,             // 86
+    G_VER_0_3258_0,             // 87
+    G_VER_0_3274_0,             // 88
+    G_VER_0_3323_0,             // 89
+    G_VER_0_3337_0,             // 90
+    G_VER_0_3351_0,             // 91
+    G_VER_0_3407_0,             // 92
+    G_VER_0_3411_0,             // 93
+    G_VER_0_3442_0,             // 94
+    G_VER_0_3504_0,             // 95
+    G_VER_0_3521_0,             // 96
+    G_VER_0_3570_0,             // 97
+    G_VER_0_3586_0,             // 98
+    G_VER_0_3717_0,             // 99
+    G_VER_0_3751_0,             // 100
+    G_VER_0_3788_0,             // 101
 };
 
 static std::string eGameVersionToString(int version) {

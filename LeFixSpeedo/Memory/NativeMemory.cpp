@@ -2,15 +2,26 @@
 
 #include <Windows.h>
 #include <Psapi.h>
+#include "Versions.h"
 
 namespace mem {
 
 	uint64_t(*GetAddressOfEntity)(int entity) = nullptr;
 
-	void init() {
+	void init(int version) {
 		if (GetAddressOfEntity == nullptr) {
-			uintptr_t GetAddressOfEntityAddress = FindPattern("\x83\xF9\xFF\x74\x31\x4C\x8B\x0D\x00\x00\x00\x00\x44\x8B\xC1\x49\x8B\x41\x08",
-															  "xxxxxxxx????xxxxxxx");
+
+			uintptr_t GetAddressOfEntityAddress;
+
+			if (version < G_VER_0_3788_0) {
+				GetAddressOfEntityAddress = FindPattern("\x83\xF9\xFF\x74\x31\x4C\x8B\x0D\x00\x00\x00\x00\x44\x8B\xC1\x49\x8B\x41\x08",
+					"xxxxxxxx????xxxxxxx");
+			}
+			else {
+				GetAddressOfEntityAddress = FindPattern("\x83\xF9\xFF\x74\x37\x8B\xD1\xC1\xFA\x08\x85\xD2\x78\x2E",
+					"xxxxxxxxxxxxxx");
+			}
+
 			GetAddressOfEntity = reinterpret_cast<uint64_t(*)(int)>(GetAddressOfEntityAddress);
 		}
 	}
