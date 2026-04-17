@@ -53,9 +53,6 @@
     <ClInclude Include="Memory\VehicleExtensions.hpp">
       <Filter>Memory</Filter>
     </ClInclude>
-    <ClInclude Include="Util\Versions.h">
-      <Filter>Memory</Filter>
-    </ClInclude>
     <ClInclude Include="Memory\NativeMemory.hpp">
       <Filter>Memory</Filter>
     </ClInclude>
@@ -67,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="Compatibility.h">
       <Filter>Compatibility</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\Versions.h">
+      <Filter>Memory</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

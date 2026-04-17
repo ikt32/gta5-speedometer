@@ -1,8 +1,11 @@
 #pragma once
 #include <cstdint>
+#include <vector>
 
 namespace mem {
-	void init();
-	extern uint64_t(*GetAddressOfEntity)(int entity);
-	uintptr_t FindPattern(const char* pattern, const char* mask);
+void init();
+uintptr_t FindPattern(const char* pattern, const char* mask);
+uintptr_t FindPattern(const char* pattStr);
+std::vector<uintptr_t> FindPatterns(const char* pattern, const char* mask);
+uintptr_t GetAddressOfEntity(int entity);
 }

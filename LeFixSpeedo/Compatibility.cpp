@@ -17,19 +17,19 @@ T CheckAddr(HMODULE lib, const std::string& funcName)
     FARPROC func = GetProcAddress(lib, funcName.c_str());
     if (!func)
     {
-        logger.Writef("Couldn't get function [%s]", funcName.c_str());
+        LOG(Error, "Couldn't get function [{}]", funcName);
         return nullptr;
     }
-    logger.Writef("Found function [%s]", funcName.c_str());
+    LOG(Info, "Found function [{}]", funcName);
     return reinterpret_cast<T>(func);
 }
 
 void setupCompatibility() {
-    logger.Writef("Setting up Manual Transmission compatibility");
+    LOG(Info, "Setting up Manual Transmission compatibility");
     MT::GearsModule = GetModuleHandle("Gears.asi");
     if (!MT::GearsModule) {
         MT::Available = false;
-        logger.Writef("Gears.asi not found");
+        LOG(Warning, "Gears.asi not found");
         return;
     }
     MT::Available = true;

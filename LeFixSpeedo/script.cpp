@@ -10,7 +10,7 @@
 
 #include <menu.h>
 #include "Util/Logger.hpp"
-#include "Util/Versions.h"
+#include "Memory/Versions.h"
 
 #include "Compatibility.h"
 
@@ -1118,10 +1118,10 @@ void onMenuExit()
 	isInMenu = false;
 }
 void initialize() {
-	logger.SetFile(GetCurrentModulePath() + "LeFixSpeedo\\LeFixSpeedo.log");
-	logger.Clear();
-	logger.Write("LeFixSpeedo " + std::string(DISPLAY_VERSION));
-	logger.Write("Game version " + eGameVersionToString(getGameVersion()));
+	gLogger.SetPath(GetCurrentModulePath() + "LeFixSpeedo\\LeFixSpeedo.log");
+	gLogger.Clear();
+	LOG(Info, "LeFixSpeedo " + std::string(DISPLAY_VERSION));
+	LOG(Info, "Game version " + Versions::GetName(getGameVersion()));
 	vehData.init();
 	std::string path = GetCurrentModulePath(); // includes trailing slash
 	path = path + "LeFixSpeedo\\settings";

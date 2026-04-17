@@ -28,12 +28,12 @@
     <ClInclude Include="Memory\NativeMemory.hpp" />
     <ClInclude Include="Memory\VehicleExtensions.hpp" />
     <ClInclude Include="Compatibility.h" />
+    <ClInclude Include="Memory\Versions.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="speedoEnums.h" />
     <ClInclude Include="Util\INIutils.hpp" />
     <ClInclude Include="Util\Logger.hpp" />
     <ClInclude Include="Util\UIutils.hpp" />
-    <ClInclude Include="Util\Versions.h" />
     <ClInclude Include="script.h" />
     <ClInclude Include="VehicleData.h" />
   </ItemGroup>
@@ -48,7 +48,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -78,7 +78,7 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FloatingPointModel>Fast</FloatingPointModel>
       <AdditionalIncludeDirectories>$(SolutionDir)thirdparty\GTAVMenuBase;$(SolutionDir)thirdparty\ScriptHookV_SDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
