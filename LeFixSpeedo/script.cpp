@@ -1161,7 +1161,7 @@ void update()
 		calculateAlphaTime();
 
 		//Screen Resolution
-		screenCorrect = GRAPHICS::_GET_ASPECT_RATIO(FALSE);
+		screenCorrect = GRAPHICS::GET_ASPECT_RATIO(FALSE);
 		relativePlacement();
 	}
 
